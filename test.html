@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+<script type="text/javascript" src="http://blog.hvinayan.com/wp-json/wp/v2/posts?category=random"></script>
+<script>
+//var xmlHttp = new XMLHttpRequest();
+//xmlHttp.open("GET",http://blog.hvinayan.com/wp-json/wp/v2/posts?filter[s]=awesome, false ); // false for synchronous request
+//xmlHttp.send( null );
+//var obj = JSON.parse(xmlHttp.responseText);
+function readTextFile(file) {
+    var rawFile = new XMLHttpRequest();
+    rawFile.overrideMimeType("application/json");
+    rawFile.open("GET", file, true);
+    rawFile.onreadystatechange = function() {
+        if (rawFile.readyState === 4 && rawFile.status == "200") {
+            callback(rawFile.responseText);
+        }
+    }
+    rawFile.send(null);
+		return rawfile.responseText;
+}
+
+//usage:
+
+    var json = JSON.parse(readTextFile("http://blog.hvinayan.com/wp-json/wp/v2/posts?category=random"));
+    console.log(json);
+
+var start="<table><tr><th>Event</th><th>Date</th></tr>";
+var end="</table>";
+var i;
+
+for (i = 0; i < 4; i++) {
+    start+="<tr>";
+		start+= "<td>" + "123"+"</td>" + "<td>" + "123" +"</td>";
+		start+="</tr>";
+}
+start+=end;
+
+document.getElementById("demo").innerHTML = start;
+</script>
+
+</body>
+</html>

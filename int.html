@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>TinkerHub</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="bootstrap-social.css" rel="stylesheet" type="text/css">
+  <link href="font-awesome.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://use.fontawesome.com/fc970de739.js"></script>
+  <style>
+  body {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      color: #818181;
+  }
+  h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #303030;
+      font-weight: 600;
+      margin-bottom: 30px;
+  }
+  h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      color: #303030;
+      font-weight: 400;
+      margin-bottom: 30px;
+  }
+  .jumbotron {
+      background-color: #f4511e;
+      color: #fff;
+      padding: 100px 25px;
+      font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+      padding: 60px 50px;
+  }
+  .bg-grey {
+      background-color: #f6f6f6;
+  }
+  .logo-small {
+      color: #f4511e;
+      font-size: 50px;
+  }
+  .logo {
+      color: #f4511e;
+      font-size: 200px;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail img {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+      background-image: none;
+      color: #f4511e;
+  }
+  .carousel-indicators li {
+      border-color: #f4511e;
+  }
+  .carousel-indicators li.active {
+      background-color: #f4511e;
+  }
+  .item h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      font-weight: 400;
+      font-style: italic;
+      margin: 70px 0;
+  }
+  .item span {
+      font-style: normal;
+  }
+  .panel {
+      border: 1px solid #f4511e;
+      border-radius:0 !important;
+      transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+      box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+      border: 1px solid #f4511e;
+      background-color: #fff !important;
+      color: #f4511e;
+  }
+  .panel-heading {
+      color: #fff !important;
+      background-color: #f4511e !important;
+      padding: 25px;
+      border-bottom: 1px solid transparent;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+      background-color: white !important;
+  }
+  .panel-footer h3 {
+      font-size: 32px;
+  }
+  .panel-footer h4 {
+      color: #aaa;
+      font-size: 14px;
+  }
+  .panel-footer .btn {
+      margin: 15px 0;
+      background-color: #f4511e;
+      color: #fff;
+  }
+  .navbar {
+      margin-bottom: 0;
+      background-color: #f4511e;
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #f4511e !important;
+      background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+  }
+  footer .glyphicon {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #f4511e;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+        font-size: 150px;
+    }
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#myPage">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="https://tinkerhub.org/">Home</a></li>
+        <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="engage.html">Engage
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="leadership.html">Leadership</a></li>
+          <li><a href="technology.html">Technology</a></li>
+          <li><a href="innovation.html">Innovation</a></li>
+          <li><a href="entrepreneurship.html">Entrepreneurship</a></li>
+        </ul>
+        </li>
+        <li><a href="model.html">Model</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="camp.html">Camp</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.tinkerhub.org">Blog</a></li>
+        <li>
+          <button style="padding-top: 14px;" type="button" class="btn btn-primary">
+          <span class="glyphicon glyphicon-star" aria-hidden="true"></span><a href="join.html">Join</a>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="jumbotron text-center">
+  <h1>Company</h1>
+  <p>We specialize in blablabla</p>
+  <form action="https://tinkerhub.us1.list-manage.com/subscribe/post?u=2d1e799b5bf31f8dceba34162&amp;id=b7645c4ea5" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form-inline" target="_blank" novalidate>
+    <input type="email" value="" name="EMAIL" id="mce-EMAIL" class="form-control required email" size="50" placeholder="Email Address" required>
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_2d1e799b5bf31f8dceba34162_b7645c4ea5" tabindex="-1" value=""></div>
+    <div style="padding-top:10px;" class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-danger"></div>
+  </form>
+</div>
+<!-- Begin MailChimp Signup Form -->
+<div id="mc_embed_signup">
+<form action="https://tinkerhub.us1.list-manage.com/subscribe/post?u=2d1e799b5bf31f8dceba34162&amp;id=b7645c4ea5" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_2d1e799b5bf31f8dceba34162_b7645c4ea5" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+</form>
+</div>
+
+<!--End mc_embed_signup-->
+
+
+
+
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-7">
+      <h2>Welcome to the TinkerHub Foundation</h2><br>
+        <h4><strong>Random:</strong>  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam volutpat, nisi in fringilla tempus, nibh risus consequat magna, eget imperdiet ipsum justo vel urna. Aenean sit amet ligula nisl. Vestibulum et velit in sem iaculis venenatis. Integer euismod mi magna, nec bibendum purus placerat sed. In efficitur dignissim maximus. Etiam finibus quam enim, eget elementum nisi dapibus in. Donec tincidunt dolor ut est lobortis, id sodales est commodo.
+          In gravida mauris id scelerisque rhoncus. Etiam justo ante, mattis gravida venenatis at, commodo at justo. Fusce commodo ante non libero gravida pharetra. Curabitur eleifend velit ligula, at euismod tellus rutrum at. Sed mattis consequat placerat. Nulla hendrerit lorem sit amet facilisis tempor. Nullam fringilla sapien erat, ac fringilla purus congue quis. Donec nec eros neque.
+          Praesent maximus neque eu sapien porttitor, pretium vestibulum quam dapibus. Quisque ac blandit ante. Etiam sodales eleifend ex eu efficitur. Suspendisse finibus vehicula nibh, sit amet sagittis sem scelerisque non. Suspendisse vestibulum neque in ligula dictum, vitae commodo odio efficitur. Suspendisse id commodo ante. Quisque mi quam, sagittis ut ligula sit amet, ullamcorper suscipit elit. Curabitur in scelerisque orci. </h4><br>
+        <p><strong>Random:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam volutpat, nisi in fringilla tempus, nibh risus consequat magna, eget imperdiet ipsum justo vel urna. Aenean sit amet ligula nisl. Vestibulum et velit in sem iaculis venenatis. Integer euismod mi magna, nec bibendum purus placerat sed. In efficitur dignissim maximus. Etiam finibus quam enim, eget elementum nisi dapibus in. Donec tincidunt dolor ut est lobortis, id sodales est commodo.
+          In gravida mauris id scelerisque rhoncus. Etiam justo ante, mattis gravida venenatis at, commodo at justo. Fusce commodo ante non libero gravida pharetra. Curabitur eleifend velit ligula, at euismod tellus rutrum at. Sed mattis consequat placerat. Nulla hendrerit lorem sit amet facilisis tempor. Nullam fringilla sapien erat, ac fringilla purus congue quis. Donec nec eros neque.
+          Praesent maximus neque eu sapien porttitor, pretium vestibulum quam dapibus. Quisque ac blandit ante. Etiam sodales eleifend ex eu efficitur. Suspendisse finibus vehicula nibh, sit amet sagittis sem scelerisque non. Suspendisse vestibulum neque in ligula dictum, vitae commodo odio efficitur. Suspendisse id commodo ante. Quisque mi quam, sagittis ut ligula sit amet, ullamcorper suscipit elit. Curabitur in scelerisque orci. </p>
+
+
+
+
+    </div>
+    <div class="col-sm-5">
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid text-center">
+<h3>What our fellow Tinkerers have to say:</h3>
+<div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <h4>"Random Random"<br><span style="font-style:normal;">Raghava, MA, MBBS</span></h4>
+    </div>
+    <div class="item">
+      <h4>"Kallaki Browie"<br><span style="font-style:normal;">Pushpalakshan Nair</span></h4>
+    </div>
+    <div class="item">
+      <h4>"YO Yo"<br><span style="font-style:normal;">Dinkan, Local Hero</span></h4>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center bg-grey">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <br>
+    <span class="fa fa-twitter"></span>
+    &nbsp;
+    <span class="fa fa-facebook"></span>
+    &nbsp;
+    <span class="fa fa-github"></span>
+    &nbsp;
+    <span class="fa fa-instagram"></span>
+  <p>Made with  <i class="fa fa-heart" aria-hidden="true"></i>  at TinkerHub</p>
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</body>
+</html>

@@ -1,0 +1,420 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>TinkerHub</title>
+  <!--<link rel="icon" href="images/nav.png">-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <!--<link href="bootstrap-social.css" rel="stylesheet" type="text/css">
+  <link href="font-awesome.css" rel="stylesheet" type="text/css">-->
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://use.fontawesome.com/fc970de739.js"></script>
+  <style>
+    .crop {
+      width: 200px;
+      height: 200px;
+      background-size: 200px 300px;
+    }
+  a {
+    color: grey;
+  }
+  .post-body iframe,.separator iframe{margin:0 auto!important;width:100%;max-width:100%;
+  height:auto;
+  min-height:350px;
+  display:block;
+  overflow:hidden;
+  padding:0!important;
+  border:none;
+  outline:none;
+  }
+  
+#row{
+  margin-left: 3%;
+  margin-right: 3%;
+}
+  body {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      color: #818181;
+  }
+  h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #303030;
+      font-weight: 600;
+      margin-bottom: 30px;
+  }
+  h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      color: #303030;
+      font-weight: 400;
+      margin-bottom: 30px;
+  }
+  .jumbotron {
+      background-color: #374B6B;
+      color: #fff;
+      padding: 100px 25px;
+      font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+      padding: 60px 50px;
+  }
+  .container-body{
+      display: flex;
+      flex-direction: row;
+      margin: 3%;
+  }
+  
+  .logo-small {
+      color: #374B6B;
+      font-size: 50px;
+  }
+  .logo {
+      color: #374B6B;
+      font-size: 200px;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail img {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+      background-image: none;
+      color: #374B6B;
+  }
+  .carousel-indicators li {
+      border-color: #374B6B;
+  }
+  .carousel-indicators li.active {
+      background-color: #374B6B;
+  }
+  .item h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      font-weight: 400;
+      font-style: italic;
+      margin: 70px 0;
+  }
+  .item span {
+      font-style: normal;
+  }
+  .panel {
+      border: 1px solid #374B6B;
+      border-radius:0 !important;
+      transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+      box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+      border: 1px solid #374B6B;
+      background-color: #fff !important;
+      color: #374B6B;
+  }
+  .panel-heading {
+      color: #fff !important;
+      background-color: #374B6B !important;
+      padding: 25px;
+      border-bottom: 1px solid transparent;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+      background-color: white !important;
+  }
+  .panel-footer h3 {
+      font-size: 32px;
+  }
+  .panel-footer h4 {
+      color: #aaa;
+      font-size: 14px;
+  }
+  .panel-footer .btn {
+      margin: 15px 0;
+      background-color: #374B6B;
+      color: #fff;
+  }
+  .navbar {
+      margin-bottom: 0;
+      background-color: #374B6B;
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #ECEEEF !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #374B6B !important;
+      background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+  }
+  footer .glyphicon {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #374B6B;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+        font-size: 150px;
+    }
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+  <nav class="navbar navbar-default navbar-fixed-top" style="opacity: 0.9;">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" rel="home" href="http://tinkerhub.org" title="Learn. Build. Collaborate.">
+        <img style=" margin-top: -4px;" src="images/logo_whiteTextRight.png" width="200" height="25">
+      </div>
+      
+    </a>
+
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="engage">Engage
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="leadership">Leadership</a></li>
+            <li><a href="technology">Technology</a></li>
+            <li><a href="innovation">Innovation</a></li>
+            <li><a href="entrepreneurship">Entrepreneurship</a></li>
+          </ul>
+          </li>
+          <li><a href="space">Space</a></li>
+          <li><a href="community">Community</a></li>
+          <li><a href="camp.html">Camp</a></li>
+          <li><a href="team">Team</a></li>
+          <li><a href="about">About</a></li>
+          <li><a href="http://blog.tinkerhub.org">Blog</a></li>
+          <li style="padding-top: 9px; padding-left:20px">
+
+              <button id="joinbtn" type="button" class="btn btn-raised btn-warning">
+                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>Join
+              </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div id='index' style="position: relative;">
+    <img style="max-width:94%;margin-left: 3%;margin-right:3%" src="images/IMG_7314.JPG" alt="cover">
+    <div style="position: absolute; top: 50%; left: 50%;transform: translate(-50%, -50%);z-index: 1000;"><h1 style="color: white; font: Lato;">LEADERSHIP BOOTCAMP</h1></div>
+  </div>
+<div class="container-body">
+  <div class="row">
+    <div class="col-sm-4">
+        <p>TinkerHub Leadership Bootcamp is a two day immersive learning program.
+                Students who are leading the IEDC activities are brought together for pear
+                learning and exposure. Tools like Campus innovation model canvas will be
+                introduced to students to structure IEDC and related activities. Industry experts
+                and startup founders will be taking sessions.</p>
+        &nbsp;
+        <a class="btn btn-info" role="link" type="submit" name="apply" href="https://goo.gl/forms/KD0u6so4bnJ0ips52">Apply Now!</a>
+    </div>
+    <div class="col-sm-8 post-body seperator video-container">
+            
+            <iframe width="853" height="480" src="https://www.youtube.com/embed/lOet3rvaEMQ" frameborder="0" allowfullscreen></iframe>
+            
+            </div>
+</div>
+</div>
+
+
+  <div class="row" id="row" >
+  <div class="col-sm-2">
+    <div class="thumbnail">
+      <div style="background-image: url('images/ab.jpg')" alt="..." class="img-circle crop" ></div>
+       <center> <h3>Abhid Aboobacker</h3>
+        <p>Abid is an ideapreneur who codes and designs experience.
+		He has led major technology community initiatives 
+		like maker party kochi,Mozbus,Mozilla Kerala.
+		He is one of the co-founder of tinkerhub</p></center>
+
+      </div>
+    </div>
+    <div class="col-sm-2">
+    <div class="thumbnail">
+      <div style="background-image: url('images/m1.jpg')" alt="..." class="img-circle crop" ></div>
+       <center> <h3>Mehar</h3>
+        <p>Mehar co-founded tinkerhub while he was studying at CUSAT. 
+		He believes that creating young leadership in technology is the key in the formation of future of kerala.
+		He currently leads the activities of Kerala Startup Mission.</p></center>
+
+      </div>
+    </div>
+    <div class="col-sm-2">
+    <div class="thumbnail">
+      <div style="background-image: url('images/ns.jpg')" alt="..." class="img-circle crop" ></div>
+       <center> <h3>Nithin Vasanth</h3>
+        <p>Nitin is a celebrated innovator who received the gandhian young technological innovation award for the year 2017. 
+		His innovative project, titled Neuro Buds, is conceptualised on a brainwave mapping smart earphone,
+		which can detect brain signals. He is currently guiding/mentoring student innovator in the state</p></center>
+
+      </div>
+    </div>
+    <div class="col-sm-2">
+    <div class="thumbnail">
+      <div style="background-image: url('images/ps.jpg')" alt="..." class="img-circle crop" ></div>
+       <center> <h3>Praveen Sridhar</h3>
+        <p>Praveen is excited by the concept of learning which led him to the founding of the tinkerhub community.
+		He was the recipient of google summer-of-code 2014. He is also an AI researcher who received a number of fellowships like tif, kairos etc</p></center>
+
+      </div>
+    </div>
+    <div class="col-sm-2">
+    <div class="thumbnail">
+      <div style="background-image: url('images/sk.jpg')" alt="..." class="img-circle crop" ></div>
+       <center> <h3>Syam Kumar V.G</h3>
+        <p>Syam believes that peer learning is the best way of learning.
+		Thus he co-founded session@4 while he was studying at CUSAT. 
+		He drives lot of communities around technology. He is also the founder of the tech company Finotes</p></center>
+
+      </div>
+    </div>
+     <div class="col-sm-2">
+    <div class="thumbnail">
+      <div style="background-image: url('images/Gopi-1.jpg')" alt="..." class="img-circle crop" ></div>
+       <center> <h3>Gopikrishnan Sasikumar</h3>
+        <p>Gopi is a striking personality who has embraced the challenges of life to build himself up.
+		He single-handedly created the community of technical enthusiasts in RIT, Pampady. 
+		A proud expert in developing campus innovative culture</p></center>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<footer class="container-fluid text-center bg-grey">
+  <a href="#index" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <br>
+    <a href="https://twitter.com/TinkerHub"><span class="fa fa-twitter"></span></a>
+    &nbsp;
+    <a href="https://www.facebook.com/tinkerhub/"><span class="fa fa-facebook"></span></a>
+    &nbsp;
+    <a href="https://github.com/TinkerHubPublic"><span class="fa fa-github"></span></a>
+    &nbsp;
+    <a href="mailchimpurl"><span class="fa fa-newspaper-o"></span></a>
+    &nbsp;
+    <a href="http://slacker-1.herokuapp.com/"><span class="fa fa-slack"></span></a>
+  <p>Made with  <i class="fa fa-heart" aria-hidden="true"></i>  at TinkerHub</p>
+  <p><i class="fa fa-envelope" aria-hidden="true"></i>  <a href="mailto:hello@tinkerhub.org">hello@tinkerhub.org</a></p>
+<p>Hosted on <a href="https://github.com/hvinayan/tinkerhub-site-new"><i class="fa fa-github" aria-hidden="true"></i>
+</a></p>
+</footer>
+
+<script>
+$(document).ready(function(){
+  $("#joinbtn").on("click", function() {
+    window.open("https://goo.gl/forms/QEiVwG75kYQyMLR53","_self")
+  });
+  // Add smooth scrolling to all links in navbar + footer link
+
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+</div>
+</body>
+</html>
