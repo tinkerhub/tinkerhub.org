@@ -1,0 +1,23 @@
+.hello-nav {
+	background: none !important;
+    width: 100%;
+    padding: 20px 0px;
+}
+
+h1.main-title {
+	font-size: 65px;
+    padding: 50px 0px;
+}
+
+h4.sub-title {
+	font-size: 32px;
+    font-weight: normal;
+}
+
+button.btn.btn-dark.main-cta {
+	margin: 32px 0px;
+}
+
+.container.features {
+	padding-top: 32px;
+}
