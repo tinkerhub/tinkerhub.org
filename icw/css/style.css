@@ -41,6 +41,10 @@ button.btn.btn-dark.main-cta {
     color: #432D88;
 }
 
+a.nav-link.main-menu {
+    color: #5cbf75 !important;
+}
+
 button.apply, button.apply>a{
     background: #432D88;
     border: none;
@@ -52,6 +56,9 @@ button.apply, button.apply>a{
     font-weight: bold;
 }
 
+img.logo {
+    width: 128px;
+}
 
 .col-sm-3.reg-btn {
     padding-top: 20px;
