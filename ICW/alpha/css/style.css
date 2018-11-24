@@ -34,4 +34,5 @@ button.btn.btn-dark.main-cta {
 .card-body {
     background: white;
     border-radius: 4px;
+    margin: 10px;
 }
