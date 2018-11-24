@@ -1,38 +1,58 @@
-body {
+/*body {
     background-image: url(banner.svg);
     background-repeat-x: no-repeat;
     background-repeat: no-repeat;
     background-position: bottom;
     background-attachment: fixed;
-}
+}*/
 
 .hello-nav {
-	background: none !important;
+    background: none !important;
     width: 100%;
     padding: 20px 0px;
 }
 
 h1.main-title {
-	font-family: 'Permanent Marker', cursive;
-	font-size: 65px;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 65px;
     padding: 58px 0px;
 }
 
 h4.sub-title {
-	font-size: 32px;
+    font-size: 32px;
     font-weight: normal;
 }
 
 button.btn.btn-dark.main-cta {
-	margin: 32px 0px;
+    margin: 32px 0px;
 }
 
 .container.features {
-	padding-top: 32px;
+    padding-top: 32px;
 }
 
 .card-body {
     background: white;
     border-radius: 4px;
     margin: 10px;
+}
+
+.col-sm-9.reg h4 {
+    color: #432D88;
+}
+
+button.apply, button.apply>a{
+    background: #432D88;
+    border: none;
+    color: white;
+    width: 140px;
+    height: 40px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.col-sm-3.reg-btn {
+    padding-top: 20px;
 }
