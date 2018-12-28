@@ -9,7 +9,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <link href="bootstrap-social.css" rel="stylesheet" type="text/css">
-  <link href="font-awesome.css" rel="stylesheet" type="text/css">
+ <!--  <link href="font-awesome.css" rel="stylesheet" type="text/css">  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -37,6 +38,24 @@
       font-weight: 400;
       margin-bottom: 30px;
   }
+  .top-buffer { margin-top:30px; }
+  .bottom-buffer { padding-bottom:80px; }
+  .new-row {
+  @include make-row();
+}
+.new-center
+{
+  margin: auto; max-width: 1500px;
+}
+  .btn-telegram
+  {
+    color:#fff;
+    background-color:#0088cc;
+  }
+  .btn-telegram:hover{
+    color:#fff;
+    background-color:#0077b3;
+}
   .jumbotron {
       background-color: #374B6B;
       color: #fff;
@@ -249,33 +268,30 @@
       </div>
     </div>
   </nav>
-
   <div class="jumbotron text-center">
     <h1>Join Us</h1>
-    <p>Here are ways in which you could also join the crew</p>
-    <form action="https://tinkerhub.us1.list-manage.com/subscribe/post?u=2d1e799b5bf31f8dceba34162&amp;id=b7645c4ea5" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form-inline" target="_blank" novalidate>
-      <input type="email" value="" name="EMAIL" id="mce-EMAIL" class="form-control required email" size="50" placeholder="Email Address" required>
-      <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_2d1e799b5bf31f8dceba34162_b7645c4ea5" tabindex="-1" value=""></div>
-      <div style="padding-top:10px;" class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-danger"></div>
-    </form>
-  </div>
+ <div class="new-row bottom-buffer top-buffer">
+  <div class="col-sm-4 col-sm-offset-4">
+       <a href="https://t.me/joinchat/A721Yj1pg3X0-ymPKvOduA/" class="btn btn-raised btn-telegram btn-lg btn-sq-lg btn-block"><i class="fa fa-telegram" aria-hidden="true"></i> Telegram</a>
+      </div>
+    </div>
+</div>
 
 
 <div class="container-fluid bg-grey">
+  <div class="new-center">
   <div class="row">
-    <div class="col-sm-3">
+    <div class="col-sm-4">
       <a href="https://slacker-1.herokuapp.com/" class="btn btn-raised btn-danger btn-lg btn-sq-lg btn-block"><i class="fa fa-slack" aria-hidden="true"></i> Slack</a>
     </div>
-    <div class="col-sm-3">
+    <div class="col-sm-4">
       <a href="https://twitter.com/TinkerHub" class="btn btn-raised btn-info btn-lg btn-sq-lg btn-block"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a>
     </div>
-    <div class="col-sm-3">
+    <div class="col-sm-4">
       <a href="https://www.facebook.com/tinkerhub/" class="btn btn-raised btn-warning btn-lg btn-sq-lg btn-block"><i class="fa fa-facebook-official" aria-hidden="true"></i> Facebook</a>
     </div>
-    <div class="col-sm-3">
-      <a href="mailchimpurl" class="btn btn-raised btn-success btn-lg btn-sq-lg btn-block"><i class="fa fa-newspaper-o" aria-hidden="true"></i> Newsletter</a>
-    </div>
   </div>
+</div>
 </div>
 
 <footer class="container-fluid text-center bg-grey">
