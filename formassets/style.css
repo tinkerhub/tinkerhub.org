@@ -41,10 +41,6 @@ span{
 	margin-top: -3em;
 	margin-bottom: 1em;
 	text-align: center;
-	
-	
-	
-
 }
 
 
@@ -105,5 +101,14 @@ span{
 }
 .also{
 	margin-top: 0.5em;
+}
+
+#msg{
+	margin-top: -1.5em;
+	margin-bottom: 1em;
+	text-align: center;
+	
+	
+
 }
 }
