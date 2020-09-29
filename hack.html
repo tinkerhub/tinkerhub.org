@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="formassets/nav-logo.png" type="image/x-icon">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="formassets/bootstrap.css">
+    <link rel="stylesheet" href="formassets/style.css">
+    <title>Hack 2020</title>
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous">
+</script>
+
+
+</head>
+
+<body>
+         <div class="navi">
+  <div class="d-flex flex-g row-1">
+        <a class="navbar-brand" href="https://tinkerhub.org/">
+    <img src="formassets/nav-logo.png" width="30" height="30" class="d-inline-block align-top" alt="Visit Tinkerhub.org">
+  Tinkerhub</a>
+        
+    </div>
+
+    </div>
+
+
+        
+        <div class="container">
+           <h1>TinkerHub HactoberFest</h1>   
+            <form id="myForm">
+                    <div class="row">
+                    <div class="col-sm">
+                        <label for="Name">Name:<span>*</span></label>
+                        <input name="Name" type="text" class="form-control" placeholder="Full Name" required>
+                    </div>
+   
+                    <div class="col-sm">
+                       <label for="Github_Username">Github Username:<span>*</span></label>
+                       <input name="Github_Username" id="Github_Username" type="text" class="form-control" placeholder="Github Username" required>
+                    </div>
+                   </div>
+
+                  <div class="row">
+                    <div class="col-sm">
+                        <label for="Email">Email:<span>*</span></label>
+                       <input name="Email" id="Email" type="text" class="form-control" placeholder="example@email.com" required>
+                    </div>
+
+                    <div class="col-sm">
+                       <label for="Phone_Number">Phone Number:<span>*</span></label>
+                       <input name="Phone_Number" id="Phone_Number" type="text" class="form-control" placeholder="+91-8888-8888-88" required>
+                    </div>
+                    </div>
+
+                    <div class="row">
+                    <div class="col-sm">
+                        <label for="College">College:<span>*</span></label>
+                        <input name="College" type="text" class="form-control" placeholder="College" required>
+                    </div>
+   
+                    <div class="col-sm">
+                       <label for="Branch">Branch<span>*</span></label>
+                       <input name="Branch" id="Branch" type="text" class="form-control" placeholder="Branch of Study" required>
+                    </div>
+                   </div>
+
+
+
+           <div class="col-lg-4 mb-3 also">
+                        <h6>Have you participated in the previous seasons of Hactoberfest?<span>*</span></h6>  
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="Question_1" id="Yes" value="Yes" required>
+                          <label class="form-check-label" for="Yes">Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-inline-input" type="radio" name="Question_1" id="no" value="No" required>
+                          <label class="form-check-label" for="no">No</label> 
+                        </div>
+        </div>
+        <div class="col-lg-4 mb-3">
+                        <h6>How would you like to participate?<span>*</span></h6> 
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="Question_2" id="Mentor" value="Mentor" required>
+                          <label class="form-check-label" for="Mentor">Mentor</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="Question_2" id="Participants" value="Participants" required>
+                          <label class="form-check-label" for="Participants">Participant</label>
+                        </div>
+      </div>
+    </form>
+  <button class="btn btn-primary booty" id="reset" type="submit" onclick="SubForm()">Submit form</button>
+  <p id="msg"></p>
+  
+</div> 
+      <script src="formassets/app.js"></script>
+</body>
+</html>

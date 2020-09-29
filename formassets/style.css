@@ -1,0 +1,114 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;400&display=swap');
+
+body{
+   	 margin: 0;
+     font-family: "Roboto Mono";
+    
+
+}
+        
+
+.container h1{
+	font-size: 3.5em;
+	font-weight: 200;
+	margin-left:1em;
+	margin-bottom: 0; 
+	text-decoration: underline;	
+}
+
+.container{
+	margin-top: 1em;
+	padding: 15px 10px 10px 10px;
+	border: 1px solid black;
+	border-radius: 9px;
+	
+}
+
+.navi{
+	margin-left: 3em;
+	margin-top: 2em;
+	margin-bottom:0;
+}
+span{
+	font-weight: bold;
+	color: red;
+}
+
+	
+
+#msg{
+	margin-top: -3em;
+	margin-bottom: 1em;
+	text-align: center;
+}
+
+
+
+.row{
+	padding-top: 1em;
+	padding-left: 1em;
+	
+}
+.also{
+	margin-top: 1em;
+}
+
+.booty{
+	margin-left: 1em;
+	margin-bottom: 2em;
+}
+
+@media only screen and (max-width: 600px) {
+
+
+
+.navi{
+	margin-left: 1.2em;
+	margin-top: 1em;
+}
+
+
+
+
+.booty{
+	margin-left: 1em;
+	margin-bottom: 2em;
+}
+
+.container h1{
+	font-size: 2em;
+	font-weight: 100;
+	margin-left:0.5em;
+	margin-bottom: 0; 
+	text-decoration: underline;	
+}
+.container{
+	margin-top: 0.1em;
+	padding: 15px 10px 10px 10px;
+	border: 1px solid black;
+	border-radius: 9px;
+	
+}
+
+.row{
+	padding-top: 0.5em;
+	
+	
+}
+.col-sm{
+	padding-top: 0.5em;
+}
+.also{
+	margin-top: 0.5em;
+}
+
+#msg{
+	margin-top: -1.5em;
+	margin-bottom: 1em;
+	text-align: center;
+	
+	
+
+}
+}
